@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "my_landing_page_backend": {
+      "candid": "src/my_landing_page_backend/my_landing_page_backend.did",
+      "package": "my_landing_page_backend",
+      "type": "rust"
+    },
+    "my_landing_page_frontend": {
+      "dependencies": [
+        "my_landing_page_backend"
+      ],
+      "source": [
+        "src/my_landing_page_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "my_landing_page_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
