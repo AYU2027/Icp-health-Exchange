@@ -1,81 +1,58 @@
-/* src/my_landing_page_frontend/src/App.css */
-
-/* Define CSS Variables for Colors and Fonts */
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #6c757d; /* Grey */
-  --accent-color: #28a745;   /* Green */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #28a745;
 
-  --text-color: #343a40;     /* Dark Grey for general text */
-  --bg-light: #f8f9fa;       /* Light grey for body background */
-  --bg-dark: #212529;       /* Dark background for hero/footer (original) */
-  --white: #ffffff;         /* Pure white */
-  --header-height: 80px; /* For Navbar */
+  --text-color: #343a40;
+  --bg-light: #f8f9fa;
+  --bg-dark: #212529;
+  --white: #ffffff;
+  --header-height: 80px;
 
-  /* RGB versions of colors (keep these for Navbar, etc.) */
-  --bg-dark-rgb: 33, 37, 41; /* RGB values of #212529 */
-  --primary-color-rgb: 0, 123, 255; /* RGB values of #007bff */
+  --bg-dark-rgb: 33, 37, 41;
+  --primary-color-rgb: 0, 123, 255;
 
-  /* Font Variables */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Open Sans", sans-serif;
 }
 
-/* Global Body Styles */
 body {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--text-color); /* Text color set to dark grey */
+  color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
-  background-color: var(--bg-light); /* Light grey body background */
-  overflow-x: hidden; /* Keep this for AOS */
-
-  /* REMOVE any #particles-js specific styles, as the component is removed */
+  background-color: var(--bg-light);
+  overflow-x: hidden;
 }
-
-/* REMOVE the #particles-js CSS block entirely */
-/*
-#tsparticles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: -1;
-}
-*/
 
 .App {
   text-align: center;
-  /* Revert to transparent or a subtle light overlay if you had one */
-  background-color: transparent; /* Allows body background to show through */
+
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative; /* Keep for z-index with Navbar */
+  position: relative;
   z-index: 1;
 }
 
-/* Ensure main content pushes footer down */
 .App-content {
   flex-grow: 1;
   padding-top: var(--header-height);
 }
 
-
-/* Global Headings Styles - Use Heading Font */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   line-height: 1.2;
   margin-top: 0;
-  /* Revert heading colors to original dark theme values */
-  color: var(--bg-dark); /* Or specific primary/accent as before */
+
+  color: var(--bg-dark);
 }
 
 h1 {
@@ -86,7 +63,7 @@ h1 {
 
 h2 {
   font-size: 2.5em;
-  color: var(--bg-dark); /* Revert to dark for h2 */
+  color: var(--bg-dark);
   margin-bottom: 25px;
 }
 
@@ -108,15 +85,14 @@ p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--text-color); /* Revert to dark text */
+  color: var(--text-color);
 }
 
-/* Sections will now have a solid white background (or light grey) */
 section {
   padding: 80px 20px;
   margin-bottom: 20px;
-  background-color: var(--white); /* Solid white background for sections */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Original lighter shadow */
+  background-color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   max-width: 1200px;
   margin-left: auto;
@@ -133,7 +109,7 @@ section {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin: 10px;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Original shadow */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
 
 .cta-button:hover {
@@ -144,22 +120,20 @@ section {
 .cta-button.secondary {
   background-color: var(--secondary-color);
   color: var(--white);
-  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2); /* Original shadow */
+  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2);
 }
 
 .cta-button.secondary:hover {
   background-color: #5a6268;
 }
 
-/* Basic image styling */
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Original shadow */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5em;

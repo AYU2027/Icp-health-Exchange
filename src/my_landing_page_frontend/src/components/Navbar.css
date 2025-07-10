@@ -1,43 +1,30 @@
-/* src/my_landing_page_frontend/src/components/Navbar.css */
-
 .navbar {
-  background-color: aliceblue; /* Start transparent */
+  background-color: aliceblue;
   height: var(--header-height);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1rem; /* Slightly smaller for sleekness */
+  font-size: 1.1rem;
   position: sticky;
   top: 0;
   z-index: 100;
   transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-/* Styles when scrolled */
 .navbar.scrolled {
-  background-color: rgba(var(--bg-dark-rgb), 0.95); /* Semi-transparent dark background */
+  background-color: rgba(var(--bg-dark-rgb), 0.95);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px); /* Blur effect */
+  backdrop-filter: blur(8px);
 }
-
-/* Ensure global --bg-dark-rgb is defined in App.css for rgba usage */
-/* In App.css:
-:root {
-  --bg-dark: #212529;
-  --bg-dark-rgb: 33, 37, 41; // Add this line
-  // ... other variables
-}
-*/
-
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%; /* Use 100% height of parent (navbar) */
+  height: 100%;
   max-width: 1300px;
   width: 100%;
-  padding: 0 30px; /* More generous padding */
+  padding: 0 30px;
 }
 
 .navbar-logo {
@@ -45,11 +32,11 @@
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.8rem; /* Slightly smaller */
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   font-family: var(--font-heading);
-  font-weight: 700; /* Bold logo text */
+  font-weight: 700;
   letter-spacing: -0.5px;
   transition: color 0.3s ease;
 }
@@ -60,54 +47,51 @@
 
 .navbar-logo .logo-img {
   height: 40px;
-  margin-right: 12px; /* Slightly more space */
+  margin-right: 12px;
   border-radius: 0;
   box-shadow: none;
 }
 
 .navbar-logo .logo-text {
-  /* You can add specific styles here if needed for the text part */
   color: var(--primary-color);
 }
 
-
 .nav-menu {
-  display: flex; /* Use flexbox for more control */
+  display: flex;
   list-style: none;
   text-align: center;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  justify-content: flex-end; /* Push items to the right */
-  flex-grow: 1; /* Allow menu to take available space */
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .nav-item {
-  height: 100%; /* Match parent height */
+  height: 100%;
   display: flex;
   align-items: center;
-  margin: 0 15px; /* Spacing between items */
+  margin: 0 15px;
 }
 
 .nav-links {
   color: var(--primary-color);
   text-decoration: none;
-  padding: 0 0 5px 0; /* Adjust padding for bottom border effect */
+  padding: 0 0 5px 0;
   height: 100%;
   transition: all 0.2s ease-out;
   display: flex;
   align-items: center;
-  font-weight: 500; /* Slightly bolder for clarity */
-  position: relative; /* For underline effect */
+  font-weight: 500;
+  position: relative;
 }
 
-/* Custom underline hover effect */
 .nav-links::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0%;
-  height: 2px; /* Thickness of underline */
+  height: 2px;
   background-color: var(--primary-color);
   transition: width 0.3s ease-out;
 }
@@ -117,43 +101,40 @@
 }
 
 .nav-links {
-  color: var(--primary-color); /* Highlight text */
+  color: var(--primary-color);
 }
 
 .nav-links:hover {
-  color: var(--primary-color); /* Highlight text */
+  color: var(--primary-color);
 }
 
-/* Button-like style for the Contact link */
 .nav-links.nav-button {
   background-color: var(--accent-color);
   color: var(--white);
   padding: 10px 20px;
   border-radius: 5px;
-  margin-left: 20px; /* More space to separate from other links */
+  margin-left: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
 }
 
 .nav-links.nav-button:hover {
-  background-color: #218838; /* Darker green */
+  background-color: #218838;
   transform: translateY(-2px);
-  color: var(--white); /* Ensure text stays white on hover */
+  color: var(--white);
 }
-.nav-links.nav-button::after { /* Remove underline for button */
+.nav-links.nav-button::after {
   display: none;
 }
 
-
 .menu-icon {
-  display: none; /* Hidden on desktop */
+  display: none;
   font-size: 1.8rem;
   cursor: pointer;
   color: var(--white);
 }
 
-/* Mobile Responsive Navbar */
 @media screen and (max-width: 960px) {
   .navbar-container {
     padding: 0 15px;
@@ -169,12 +150,12 @@
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    background: var(--bg-dark); /* Dark background for mobile menu */
+    background: var(--bg-dark);
     padding: 0;
     margin-right: 0;
-    justify-content: flex-start; /* Stack items from top */
-    align-items: center; /* Center items horizontally */
-    gap: 0; /* Remove gap */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
   }
 
   .nav-menu.active {
@@ -186,33 +167,33 @@
 
   .nav-item {
     width: 100%;
-    height: auto; /* Allow height to adjust to content */
+    height: auto;
     margin: 0;
-    padding: 15px 0; /* Vertical padding for mobile items */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-links {
     text-align: center;
-    padding: 1rem; /* Adjust padding */
+    padding: 1rem;
     width: 100%;
-    display: block; /* Make link take full width */
+    display: block;
     color: var(--white);
   }
 
   .nav-links:hover {
-    background-color: rgba(var(--primary-color-rgb), 0.2); /* Subtle hover for mobile */
+    background-color: rgba(var(--primary-color-rgb), 0.2);
     color: var(--primary-color);
     border-radius: 0;
     border-bottom: none;
   }
-  .nav-links::after { /* Remove desktop underline effect for mobile */
+  .nav-links::after {
     display: none;
   }
 
   .nav-links.nav-button {
-    margin: 15px auto; /* Center button on mobile */
-    width: 80%; /* Make button wider */
+    margin: 15px auto;
+    width: 80%;
   }
   .nav-links.nav-button:hover {
     background-color: #218838;
@@ -230,14 +211,8 @@
   }
 }
 
-/* Add this to your App.css to make --bg-dark-rgb available */
-/* src/my_landing_page_frontend/src/App.css */
-/* In :root section */
-/* ... existing vars ... */
-/* Add the RGB version of your dark background for rgba usage */
 :root {
-  --bg-dark: #212529; /* Keep original hex value */
-  --bg-dark-rgb: 33, 37, 41; /* Add this line: RGB values of #212529 */
-  --primary-color-rgb: 0, 123, 255; /* Add this for primary color */
-  /* ... other variables ... */
+  --bg-dark: #212529;
+  --bg-dark-rgb: 33, 37, 41;
+  --primary-color-rgb: 0, 123, 255;
 }

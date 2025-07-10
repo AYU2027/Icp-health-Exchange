@@ -1,5 +1,5 @@
 import React from 'react';
-import './CallToAction.css'; // Create this CSS file
+import './CallToAction.css';
 
 function CallToAction() {
   return (

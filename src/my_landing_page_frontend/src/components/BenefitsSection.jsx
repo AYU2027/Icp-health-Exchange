@@ -1,6 +1,6 @@
 import React from 'react';
-import './BenefitsSection.css'; // Create this CSS file
-import benefitsImage from '../assests/hero-image.png'; // Make sure this path is correct
+import './BenefitsSection.css';
+import benefitsImage from '../assests/hero-image.png';
 
 function BenefitsSection() {
   return (

@@ -32,18 +32,18 @@
 }
 
 .benefit-card ul {
-  list-style: none; /* Remove default bullet points */
+  list-style: none;
   padding: 0;
 }
 
 .benefit-card ul li {
   margin-bottom: 10px;
   position: relative;
-  padding-left: 25px; /* Space for custom bullet */
+  padding-left: 25px;
 }
 
 .benefit-card ul li::before {
-  content: '✓'; /* Custom checkmark bullet */
+  content: "✓";
   color: var(--accent-color);
   position: absolute;
   left: 0;

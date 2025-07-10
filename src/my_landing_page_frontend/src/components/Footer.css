@@ -1,5 +1,3 @@
-/* src/my_landing_page_frontend/src/components/Footer.css */
-
 .app-footer {
   background-color: var(--bg-dark);
   color: var(--white);
@@ -21,7 +19,7 @@
 
 .footer-column {
   flex: 1;
-  min-width: 250px; /* Minimum width for columns */
+  min-width: 250px;
   padding: 15px;
 }
 
@@ -35,7 +33,7 @@
   font-size: 0.95em;
   color: rgba(var(--white), 0.8);
   margin-bottom: 10px;
-  max-width: none; /* Override App.css max-width for paragraphs */
+  max-width: none;
   text-align: left;
 }
 

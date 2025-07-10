@@ -3,7 +3,7 @@
   color: var(--white);
   padding: 80px 20px;
   border-radius: 10px;
-  margin-top: 50px; /* Add margin to separate from prev section */
+  margin-top: 50px;
 }
 
 .cta-section h2 {
@@ -23,11 +23,11 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Allow buttons to wrap */
+  flex-wrap: wrap;
 }
 
 .cta-button.primary {
-  background-color: var(--accent-color); /* Use accent color for main CTA */
+  background-color: var(--accent-color);
   box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
 }
 

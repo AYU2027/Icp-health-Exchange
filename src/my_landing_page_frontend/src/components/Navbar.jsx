@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'; // Import useEffect
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import logo from '../assests/reshot-icon-flickr-PTXY7M2H6V.svg'; // Make sure this path is correct and file exists
+import logo from '../assests/reshot-icon-flickr-PTXY7M2H6V.svg';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false); // New state for scroll effect
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,7 +12,7 @@ function Navbar() {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 50) { // When user scrolls down more than 50px
+    if (offset > 50) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -24,12 +24,12 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Run effect only once on mount
+  }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      // Offset for sticky header
+
       const headerOffset = document.querySelector('.navbar').clientHeight;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
@@ -38,12 +38,12 @@ function Navbar() {
         top: offsetPosition,
         behavior: 'smooth'
       });
-      setIsOpen(false); // Close menu on click for mobile
+      setIsOpen(false);
     }
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}> {/* Add 'scrolled' class */}
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}> { }
       <div className="navbar-container">
         <a href="#home" className="navbar-logo" onClick={() => scrollToSection('home')}>
           <img src={logo} alt="ICP Health Data Exchange Logo" className="logo-img" />

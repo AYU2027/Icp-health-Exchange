@@ -1,7 +1,7 @@
-// src/my_landing_page_frontend/src/components/HeroSection.jsx
+
 import React from 'react';
-import './HeroSection.css'; // Make sure this CSS exists and is styled
-import heroImage from '../assests/1.jpg'; // Placeholder image
+import './HeroSection.css';
+import heroImage from '../assests/1.jpg';
 
 function HeroSection() {
   return (

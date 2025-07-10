@@ -1,6 +1,6 @@
 import React from 'react';
-import './SolutionSection.css'; // Create this CSS file
-import solutionImage from '../assests/Salesforce-Healthcare-Apps.jpg'; // Make sure this path is correct
+import './SolutionSection.css';
+import solutionImage from '../assests/Salesforce-Healthcare-Apps.jpg';
 
 function SolutionSection() {
   return (

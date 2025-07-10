@@ -1,6 +1,6 @@
 import React from 'react';
-import './ProblemSection.css'; // Create this CSS file
-import problemImage from '../assests/2.jpg'; // Make sure this path is correct
+import './ProblemSection.css';
+import problemImage from '../assests/2.jpg';
 
 function ProblemSection() {
   return (
