@@ -1,30 +1,65 @@
-import { useState } from 'react';
-import { my_landing_page_backend } from 'declarations/my_landing_page_backend';
+// src/my_landing_page_frontend/src/App.jsx
+
+import React, { useEffect } from 'react'; // Removed useCallback as it's no longer needed for particles
+import './App.css';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import ProblemSection from './components/ProblemSection';
+import SolutionSection from './components/SolutionSection';
+import HowItWorksSection from './components/HowItWorksSection';
+import BenefitsSection from './components/BenefitsSection';
+import CallToAction from './components/CallToAction';
+import Footer from './components/Footer';
+
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
+// REMOVE these tsParticles imports:
+// import Particles from '@tsparticles/react';
+// import { loadSlim } from '@tsparticles/slim';
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    my_landing_page_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-cubic',
     });
-    return false;
-  }
+    // The particlesInit and particlesLoaded callbacks are also removed as they are no longer needed
+  }, []);
 
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <div className="App">
+      {/* REMOVE the entire <Particles> component block here */}
+      {/*
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          // ... your tsParticles config ...
+        }}
+        style={{
+          position: 'fixed',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+      />
+      */}
+      <Navbar />
+      <div className="App-content">
+        <HeroSection />
+        <ProblemSection />
+        <SolutionSection />
+        <HowItWorksSection />
+        <BenefitsSection />
+        <CallToAction />
+      </div>
+      <Footer />
+    </div>
   );
 }
 

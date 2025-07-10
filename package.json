@@ -14,5 +14,8 @@
   "type": "module",
   "workspaces": [
     "src/my_landing_page_frontend"
-  ]
+  ],
+  "dependencies": {
+    "asos": "^1.1.4"
+  }
 }

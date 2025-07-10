@@ -1,0 +1,36 @@
+.cta-section {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin-top: 50px; /* Add margin to separate from prev section */
+}
+
+.cta-section h2 {
+  color: var(--white);
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.cta-button.primary {
+  background-color: var(--accent-color); /* Use accent color for main CTA */
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.cta-button.primary:hover {
+  background-color: #218838;
+}
